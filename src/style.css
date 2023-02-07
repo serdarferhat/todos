@@ -1,0 +1,22 @@
+.App{
+    width: 400px;
+    margin: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 18px;
+    }
+.temizle{
+    background: #6c757d;
+    color: aliceblue;
+}
+.yapildi{
+    text-decoration: line-through;
+    color: rgba(131, 5, 5, 0.776);
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    
+}
