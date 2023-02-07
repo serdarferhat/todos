@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { list_add,line_through } from "./actions";
+import { list_add,line_through,line_delete } from "./actions";
 import "./style.css";
 
 function App(props) {
@@ -22,7 +22,7 @@ function App(props) {
         >
           Ekle
         </button>
-        <button className="temizle btn btn-sm">Sil</button>
+        <button onClick={()=>props.line_delete()} className="temizle btn btn-sm">Sil</button>
       </div>
       <hr />
       {props.liste.map((item) => (
@@ -40,4 +40,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { list_add,line_through })(App);
+export default connect(mapStateToProps, { list_add,line_through,line_delete })(App);

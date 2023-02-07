@@ -1,4 +1,4 @@
-import { EKLE, ISARETLE } from "../actions";
+import { EKLE, ISARETLE, SIL } from "../actions";
 
 const INITIAL_STATE={
     liste:[
@@ -17,6 +17,7 @@ export const reducer=(state=INITIAL_STATE,action)=>{
             ]
         }
         case ISARETLE:return{...state,liste:state.liste.map(item=>item.id===action.payload ? {...item,yapildi: ! item.yapildi}:item)}
+        case SIL:return{...state,liste:state.liste.filter(item=>item.yapildi===false)}
         default :
          return state;
     };
