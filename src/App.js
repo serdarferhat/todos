@@ -22,7 +22,7 @@ function App(props) {
         >
           Ekle
         </button>
-        <button onClick={()=>props.line_delete()} className="temizle btn btn-sm">Sil</button>
+        <button onClick={()=>props.line_delete()} className="temizle btn btn-sm">Yapılanı Sil</button>
       </div>
       <hr />
       {props.liste.map((item) => (
